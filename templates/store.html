@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block main %}
+    <section id="productsSection">
+        <div class="resourceProduct">
+            <h1 class="resourcesTitle">همه محصولات</h1>
+        </div>
+        {% for product in products %}
+            <div class="products">
+                <div class="product-box">
+                    <img src="{{ product.imageurl }}" height="30%">
+                    <h1>{{ product.name }}</h1>
+                    <h3>{{ product.sdescription }}</h3>
+                    <h2>قیمت: {{ product.price }}</h2>
+                    <button class="buy"><a href="/product/{{ product.id }}">خرید</a></button>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock %}

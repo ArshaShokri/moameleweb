@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block main %}
+    <section id="productsSection">
+        <div class="resourceProduct">
+            <h1 class="resourcesTitle">سبد خرید</h1>
+        </div>
+        {% for product in cart %}
+        <form action="/cart/remove" method="post">
+            <div class="products">
+                <div class="product-box">
+                    <img src="{{ product.imageurl }}" height="30%">
+                    <h1>{{ product.name }}</h1>
+                    <h3>{{ product.sdescription }}</h3>
+                    <h2>قیمت: {{ product.price }}</h2>
+                    <input type="hidden" name="id" value="{{ product.id }}">
+                    <button class="buy" type="submit()"><p class="cartbtn">حذف</p></button>
+                </div>
+            </div>
+        </form>
+        {% endfor %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <script>
+                        iqwerty.toast.toast('{{ message }}', {
+                            style: {
+                                main: {
+                                    background: "pink",
+                                    color: "black",
+                                },
+                            },
+                        });
+                    </script>
+                {% endfor%}
+            {% endif %}
+        {% endwith %}
+    </section>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block main %}
+<section id="loginSection">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div id="loginCard">
+        <form action="/create" method="post">
+            <h1>اظافه کردن محصول</h1>
+            <div><label for="">اسم محصول</label> <input type="text" placeholder="اسم محصول" name="name" required> </div>
+            <div><label for="">توضیح کوتاه</label><input type="text" placeholder="توضیح کوناه محصول" name="sdescription" required> </div>
+            <div><label for="">توضیحات</label><input type="text" placeholder="توضیحات" name="description" required> </div>
+            <div><label for="">لینک عکس</label><input type="text" placeholder="لینک عکس" name='imageurl' required> </div>
+            <div><label for="">قیمت</label><input type="text" placeholder="قیمت" name="price" required> </div>
+            <button id="loginButton" onclick="submit()">
+                <p style="padding: 0 76px;">ایجاد</p>
+            </button>
+        </form>
+    </div>
+</section>
+{% endblock %}

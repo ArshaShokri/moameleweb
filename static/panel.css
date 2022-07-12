@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'BYekan';
+    src: url('./fonts/BYekan.ttf');
+}
+
+@font-face {
+    font-family: 'BYekanBold';
+    src: url('./fonts/BYekanBold.ttf');
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#loginSection {
+    background-color: #131125;
+    height: 700px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+}
+
+#loginSection p {
+    text-decoration: none;
+    color: white;
+    font-family: IranSans, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all 0.3s;
+}
+
+#loginSection p:hover {
+    text-decoration: none;
+    color: #b393d3;
+    font-family: IranSans, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#loginSection button {
+    width: 200px;
+    font-size: 30px;
+    height: 50px;
+    background-color: white;
+    color: #3E065F;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+#loginSection button p{
+    padding: 0px 50px;
+    color: black;
+}
+
+#loginSection button:hover {
+    background-color: #3E065F;
+}
+
+#loginCard * {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+    text-align: right;
+}
+
+#loginCard {
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.13);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    width: 450px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    height: 600px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+}
+
+#loginCard h1 {
+    font-family: LaleZar, 'Courier New', Courier, monospace;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 10px;
+    color: #fdfdfe;
+    padding: 10px;
+    text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+        0px 0px 20px #b393d3;
+}
+
+#loginCard label {
+    text-align: right;
+    font-family: BYekanBold, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: block;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+}
+
+#loginCard input {
+    display: block;
+    height: 40px;
+    width: 300px;
+    background-color: rgba(233, 233, 233, 0.07);
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    font-family: BYekan, 'Courier New', Courier, monospace;
+    color: #e5e5e5;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.shape {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.shape:first-child {
+    background: linear-gradient(#1845ad,
+            #23a2f6);
+    top: 150px;
+    left: 300px;
+}
+
+.shape:last-child {
+    background: linear-gradient(to right,
+            #3E065F,
+            #700B97);
+    bottom: 250px;
+    right: 300px;
+}

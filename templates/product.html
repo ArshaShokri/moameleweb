@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main %}
+<section id="product">
+    <form action="/cart/add" method="post">
+        <div class="card">
+        <div id="productDes">
+            <div id="productImg"><img src="{{ product.imageurl }}" alt=""></div>
+            <div id="productInfo">
+                <h1>{{ product.name }}</h1>
+                <hr>
+                <p>{{ product.description }}</p>
+            </div>
+            <div id="productHesab">
+                <h2>قیمت</h2>
+                <h2 id="price">{{ product.price }}</h2>
+                <h2 id="price" style="font-size: 25px;">تومان</h2>
+                <input type="hidden" name="id" value="{{ product.id }}">
+                <button id="productConfirm" type="submit">
+                    <p style="padding: 0 50px;">افزودن به سبد</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+</section>
+{% endblock %}
